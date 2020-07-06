@@ -11,3 +11,15 @@ Una imagen es una plantilla para crear servidores donde incluyen un ambiente, un
 
 === Repositorio de imagenes
 Es como un menú o receta de comida donde se encuentran las recetas o platillos que tenemos con sus caracteristicas. Es decir, tendremos un paquete con las distintas imagenes que podemos tomar, y se elige la que pueda cubrir las bases de la aplicación.
+
+== Kubernetes and OpenShift
+=== Limitaciones de los contenedores
+Al trabajar de manera independiente los contenedores deben levantarse o actualizarse de manera manual. ¿Qué pasa si la organización a crecido y es imposible hacer este trabajo manualmente?
+
+=== Kubernates
+Kubernates maneja y progama los contenedores para resolver la alta disponibilidad.
+Al saber que nuestra aplicacion puede morir en algun momento, lo que hace Kubernates es manejar estos contenedores donde si uno cae, crea o enlaza un nuevo contenedor de las mismas caracteristicas.
+
+=== OpenShift
+Le añade la capacidad a los contenedores de Kubernates de que actuen como una Plataforma como un Servicio(PaaS). Realiza operaciones automatizadas para gestionar las implementaciones de la nube. Tambien, mejora la productividad de los desarrolladores e innovación.
+
