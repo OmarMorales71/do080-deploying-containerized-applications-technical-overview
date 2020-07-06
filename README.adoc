@@ -39,9 +39,34 @@ $sudo podman run rhel:7.5 echo "Hello World!"
 
 En el comando para ejecutar una imagen el 7.5 representa la version de la imagen y el echo "Hello World" es lo que hará despues de crear el contenedor. (Puede ser sustuido por cualquier orden)
 
-== Ejecutar una imagen personalizada
+=== Ejecutar una imagen personalizada
 [source, asciidoc]
 ----
 = Crear un contenedor de una imagen custom (con Variables de entorno)
 $sudo podman run --name mysql-custom -e MYSQL_USER=myuser -e MYSQL_PASSWORD=mypass -d mysql:5.5
+----
+
+== DockerFiles
+
+Es un archivo el cual nos permitira construir imagenes personalizadas, el cual lo hará de una manera más legible y escalable que el ejemplo anterior.
+
+Los pasos son: 
+
+. Crear un directorio de trabajo
+. Crear y escribir un DockerFile
+. Crear esta imagen con podman.
+
+Ejemplo de un Dockerfile
+
+image:https://miro.medium.com/max/811/1*S5njsanIz-2TtMdHF4Xf7Q.png[Fork,800]
+
+=== Crear una imagen personalizada
+[source, asciidoc]
+----
+= Desde el directorio donde esta el docker file
+$sudo podman build -t do080/apache .
+(do080/apache sera donde se creará nuestra imagen)
+
+= Crear un contenedor desde esta imagen
+$sudo podman run --name lab-apache -d 10080:80 do080/apache
 ----
