@@ -118,3 +118,12 @@ $ oc expose svc/[nombre-servicio]
 La ruta que tomará una petición sera el de entrar en el Master Node y de ahi ir bajando en la arquitectura donde el Servicio redireccionará a Pub correspondiente.
 
 La direccion IP corresponde al servicio.
+
+== Web Console
+
+Permite a los usuarios manejar y administrar sus proyectos.
+
+Más caracteristicas:
+
+. Administrar recursos.
+. Monitorear desarrollos, creaciones, pods y eventos.
