@@ -1,0 +1,13 @@
+= Aplicaciones en Contenedores
+
+:toc:
+
+== ¿Qué es un contenedor?
+Los contenedores con un conjunto de uno o más procesos/aplicaciones que estan aislados del resto del sistema y corren independientemente. Es decir, no afectan al sistema y el sistema no los afecta.
+
+== Conceptos de la Arquitectura de Contenedores Linux
+=== Imagen
+Una imagen es una plantilla para crear servidores donde incluyen un ambiente, una configuracion y librerias por defecto.
+
+=== Repositorio de imagenes
+Es como un menú o receta de comida donde se encuentran las recetas o platillos que tenemos con sus caracteristicas. Es decir, tendremos un paquete con las distintas imagenes que podemos tomar, y se elige la que pueda cubrir las bases de la aplicación.
