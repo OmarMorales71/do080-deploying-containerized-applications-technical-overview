@@ -23,3 +23,25 @@ Al saber que nuestra aplicacion puede morir en algun momento, lo que hace Kubern
 === OpenShift
 Le añade la capacidad a los contenedores de Kubernates de que actuen como una Plataforma como un Servicio(PaaS). Realiza operaciones automatizadas para gestionar las implementaciones de la nube. Tambien, mejora la productividad de los desarrolladores e innovación.
 
+== Crear un contenedor
+=== Descargar y ejecutar images para contenedor
+[source, asciidoc]
+----
+= Buscar una imagen (rhel en este caso es el nombre de mi imagen)
+$sudo podman search rhel
+
+= Descargar una imagen
+$sudo podman pull rhel
+
+= Ejecutar
+$sudo podman run rhel:7.5 echo "Hello World!"
+----
+
+En el comando para ejecutar una imagen el 7.5 representa la version de la imagen y el echo "Hello World" es lo que hará despues de crear el contenedor. (Puede ser sustuido por cualquier orden)
+
+== Ejecutar una imagen personalizada
+[source, asciidoc]
+----
+= Crear un contenedor de una imagen custom (con Variables de entorno)
+$sudo podman run --name mysql-custom -e MYSQL_USER=myuser -e MYSQL_PASSWORD=mypass -d mysql:5.5
+----
