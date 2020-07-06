@@ -90,5 +90,31 @@ $sudo podman run --name lab-apache -d 10080:80 do080/apache
     - Tiene acceso a los pods y da acceso dependiento de la petición
 
 === Lo nuevo en OpenShift 4
-    El comando oc  nos permite la interación con un RHOCP cluster.
-    Es un ambiente donde podemos saber que esta pasando dentro de nuestra arquitectura Kubernetes.
+
+El comando oc nos permite la interación con un RHOCP cluster.
+Es un ambiente donde podemos saber que esta pasando dentro de nuestra arquitectura Kubernetes.
+
+[source, asciidoc]
+----
+= Crear un proyecto
+$ oc new-project my-project
+
+= Crear una aplicación
+$ oc new-app [nombre-imagen]~[url-repository]
+
+=Obtener los pods
+$ oc get pods -w
+
+=Obtener los servicios
+$ oc get svc
+
+=Poner la app en una ruta
+$ oc expose svc/[nombre-servicio]
+
+----
+
+== Rutas
+
+La ruta que tomará una petición sera el de entrar en el Master Node y de ahi ir bajando en la arquitectura donde el Servicio redireccionará a Pub correspondiente.
+
+La direccion IP corresponde al servicio.
