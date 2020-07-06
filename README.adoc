@@ -70,3 +70,25 @@ $sudo podman build -t do080/apache .
 = Crear un contenedor desde esta imagen
 $sudo podman run --name lab-apache -d 10080:80 do080/apache
 ----
+
+== Recursos Kubernetes y OpenShift
+=== Arquitectura Kubernetes
+
+. Pods:
+    - Son los objetos más pequeños que se pueden manejar en Kubernetes. Estos pods almacenan uno o más contenedores.
+
+. Master Node:
+    - Otorga servicios basicos de un cluster. Es el nodo que orquesta el proyecto.
+
+. Worker Node:
+    - Asi como el master node es el que orquesta. Worker node es quien realiza los trabajos y almacenan a los pods.
+
+. Controller: 
+    - Es quien esta al tanto de los recursos que tenemos y en los cambios de estado para poder actuar.
+
+. Services: 
+    - Tiene acceso a los pods y da acceso dependiento de la petición
+
+=== Lo nuevo en OpenShift 4
+    El comando oc  nos permite la interación con un RHOCP cluster.
+    Es un ambiente donde podemos saber que esta pasando dentro de nuestra arquitectura Kubernetes.
